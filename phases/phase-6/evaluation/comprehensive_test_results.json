@@ -1,0 +1,15 @@
+{
+  "total_tests": 5,
+  "passed_tests": 3,
+  "failed_tests": 2,
+  "success_rate": 60.0,
+  "total_duration": 2.249542236328125,
+  "ready_for_deployment": false,
+  "test_results": [
+    "TestResult(name='Health Endpoints', passed=True, duration=0.31725454330444336, details='Phase4: Status: ok, Service: restaurant-reco-phase-4, Phase5: Status: ok, Phase4: healthy', error=None)",
+    "TestResult(name='Basic Recommendations', passed=False, duration=1.4501640796661377, details='Tests passed: 2/3', error=None)",
+    "TestResult(name='Error Handling', passed=False, duration=0.12642765045166016, details='Error handling tests passed: 1/3', error=None)",
+    "TestResult(name='Feedback System', passed=True, duration=0.028823137283325195, details='Feedback submitted successfully, Stats available: True', error=None)",
+    "TestResult(name='Performance', passed=True, duration=0.3268728256225586, details='Avg time: 0.07s, Max: 0.08s, Success rate: 100.0%', error=None)"
+  ]
+}

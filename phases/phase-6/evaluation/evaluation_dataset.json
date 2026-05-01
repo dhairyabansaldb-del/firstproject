@@ -1,0 +1,276 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "basic_north_indian_bellandur",
+      "name": "Basic North Indian in Bellandur",
+      "description": "Simple request for North Indian cuisine in Bellandur area",
+      "preferences": {
+        "location": "Bellandur",
+        "budget": "medium",
+        "cuisine": "North Indian",
+        "min_rating": 4.0,
+        "additional_preferences": [],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.0,
+        "budget_range": [
+          800,
+          1500
+        ]
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.4,
+        "diversity_weight": 0.3,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "budget_friendly_chinese",
+      "name": "Budget-Friendly Chinese",
+      "description": "Low budget Chinese cuisine request",
+      "preferences": {
+        "location": "HSR",
+        "budget": "low",
+        "cuisine": "Chinese",
+        "min_rating": 3.5,
+        "additional_preferences": [
+          "quick-service"
+        ],
+        "limit": 3
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 3.5,
+        "max_cost": 800
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.5,
+        "price_sensitivity_weight": 0.3,
+        "explanation_weight": 0.2
+      },
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "high_end_italian",
+      "name": "High-End Italian Dining",
+      "description": "Premium Italian restaurant request",
+      "preferences": {
+        "location": "Koramangala",
+        "budget": "high",
+        "cuisine": "Italian",
+        "min_rating": 4.5,
+        "additional_preferences": [
+          "romantic"
+        ],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.5,
+        "min_cost": 1500
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.3,
+        "premium_quality_weight": 0.4,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "very_high_rating_requirement",
+      "name": "Very High Rating Requirement",
+      "description": "Request for extremely high-rated restaurants",
+      "preferences": {
+        "location": "Indiranagar",
+        "budget": "medium",
+        "cuisine": "Continental",
+        "min_rating": 4.9,
+        "additional_preferences": [],
+        "limit": 3
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.9
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.6,
+        "fallback_handling_weight": 0.4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "scenario_id": "specific_location_no_results",
+      "name": "Specific Location with No Results",
+      "description": "Request for location that might have limited options",
+      "preferences": {
+        "location": "Electronic City",
+        "budget": "medium",
+        "cuisine": "Mexican",
+        "min_rating": 4.0,
+        "additional_preferences": [
+          "family-friendly"
+        ],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.0
+      },
+      "quality_criteria": {
+        "fallback_handling_weight": 0.5,
+        "explanation_weight": 0.3,
+        "diversity_weight": 0.2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "scenario_id": "multiple_cuisines_preference",
+      "name": "Multiple Additional Preferences",
+      "description": "Request with multiple additional preferences",
+      "preferences": {
+        "location": "Marathahalli",
+        "budget": "medium",
+        "cuisine": "North Indian",
+        "min_rating": 4.0,
+        "additional_preferences": [
+          "family-friendly",
+          "outdoor-seating",
+          "quick-service"
+        ],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.0
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.4,
+        "preference_matching_weight": 0.3,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "edge_case_min_budget",
+      "name": "Minimum Budget Edge Case",
+      "description": "Request with very low budget constraint",
+      "preferences": {
+        "location": "Bellandur",
+        "budget": "low",
+        "cuisine": "South Indian",
+        "min_rating": 4.2,
+        "additional_preferences": [],
+        "limit": 3
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.2,
+        "max_cost": 800
+      },
+      "quality_criteria": {
+        "price_sensitivity_weight": 0.5,
+        "relevance_weight": 0.3,
+        "fallback_handling_weight": 0.2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "weekend_family_dinner",
+      "name": "Weekend Family Dinner",
+      "description": "Typical weekend family dining request",
+      "preferences": {
+        "location": "Sarjapur Road",
+        "budget": "medium",
+        "cuisine": "North Indian",
+        "min_rating": 4.0,
+        "additional_preferences": [
+          "family-friendly"
+        ],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.0
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.4,
+        "family_suitability_weight": 0.3,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "business_lunch_quick",
+      "name": "Business Lunch - Quick Service",
+      "description": "Quick business lunch requirement",
+      "preferences": {
+        "location": "Koramangala",
+        "budget": "medium",
+        "cuisine": "Continental",
+        "min_rating": 4.0,
+        "additional_preferences": [
+          "quick-service"
+        ],
+        "limit": 3
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.0
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.4,
+        "speed_weight": 0.3,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "date_night_romantic",
+      "name": "Date Night - Romantic Setting",
+      "description": "Romantic dinner for two",
+      "preferences": {
+        "location": "Indiranagar",
+        "budget": "high",
+        "cuisine": "Italian",
+        "min_rating": 4.3,
+        "additional_preferences": [
+          "romantic"
+        ],
+        "limit": 5
+      },
+      "expected_constraints": {
+        "location_match": true,
+        "cuisine_match": true,
+        "min_rating": 4.3,
+        "min_cost": 1500
+      },
+      "quality_criteria": {
+        "relevance_weight": 0.3,
+        "romance_suitability_weight": 0.4,
+        "explanation_weight": 0.3
+      },
+      "difficulty": "medium"
+    }
+  ],
+  "metadata": {
+    "total_scenarios": 10,
+    "difficulty_distribution": {
+      "easy": 3,
+      "medium": 5,
+      "hard": 2
+    },
+    "created_at": "2024-01-01T00:00:00Z"
+  }
+}

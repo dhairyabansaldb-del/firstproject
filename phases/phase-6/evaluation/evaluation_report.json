@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "evaluation_timestamp": "2026-04-30T17:59:20.208082",
+    "total_scenarios": 10,
+    "successful_scenarios": 3,
+    "success_rate": 30.0,
+    "scenarios_with_fallback": 7,
+    "fallback_rate": 70.0
+  },
+  "performance_metrics": {
+    "avg_processing_time": 17.289,
+    "total_recommendations_generated": 13,
+    "avg_recommendations_per_scenario": 1.3
+  },
+  "quality_metrics": {
+    "avg_overall_score": 0.206,
+    "avg_relevance_score": 0.27,
+    "avg_diversity_score": 0.18,
+    "avg_explanation_score": 0.24
+  },
+  "difficulty_breakdown": {
+    "easy": {
+      "count": 3,
+      "avg_score": 0.0,
+      "avg_time": 30.049020846684773,
+      "success_rate": 0.0
+    },
+    "medium": {
+      "count": 5,
+      "avg_score": 0.28979999999999995,
+      "avg_time": 16.25653429031372,
+      "success_rate": 40.0
+    },
+    "hard": {
+      "count": 2,
+      "avg_score": 0.30541666666666667,
+      "avg_time": 0.7323793172836304,
+      "success_rate": 50.0
+    }
+  },
+  "error_analysis": {
+    "unknown": 5,
+    "HTTP 503": 2
+  },
+  "top_performing_scenarios": [
+    {
+      "scenario_id": "date_night_romantic",
+      "scenario_name": "Date Night - Romantic Setting",
+      "difficulty": "medium",
+      "score": 0.8416666666666666,
+      "processing_time": 19.605260133743286,
+      "used_fallback": false,
+      "recommendation_count": 5
+    },
+    {
+      "scenario_id": "specific_location_no_results",
+      "scenario_name": "Specific Location with No Results",
+      "difficulty": "hard",
+      "score": 0.6108333333333333,
+      "processing_time": 1.0946390628814697,
+      "used_fallback": false,
+      "recommendation_count": 3
+    },
+    {
+      "scenario_id": "high_end_italian",
+      "scenario_name": "High-End Italian Dining",
+      "difficulty": "medium",
+      "score": 0.6073333333333333,
+      "processing_time": 1.1815400123596191,
+      "used_fallback": false,
+      "recommendation_count": 5
+    },
+    {
+      "scenario_id": "basic_north_indian_bellandur",
+      "scenario_name": "Basic North Indian in Bellandur",
+      "difficulty": "easy",
+      "score": 0,
+      "processing_time": 30.059011936187744,
+      "used_fallback": true,
+      "recommendation_count": 0
+    },
+    {
+      "scenario_id": "budget_friendly_chinese",
+      "scenario_name": "Budget-Friendly Chinese",
+      "difficulty": "easy",
+      "score": 0,
+      "processing_time": 30.045591831207275,
+      "used_fallback": true,
+      "recommendation_count": 0
+    }
+  ],
+  "worst_performing_scenarios": [
+    {
+      "scenario_id": "very_high_rating_requirement",
+      "scenario_name": "Very High Rating Requirement",
+      "difficulty": "hard",
+      "score": 0,
+      "processing_time": 0.370119571685791,
+      "used_fallback": true,
+      "recommendation_count": 0
+    },
+    {
+      "scenario_id": "multiple_cuisines_preference",
+      "scenario_name": "Multiple Additional Preferences",
+      "difficulty": "medium",
+      "score": 0,
+      "processing_time": 30.050873517990112,
+      "used_fallback": true,
+      "recommendation_count": 0
+    },
+    {
+      "scenario_id": "edge_case_min_budget",
+      "scenario_name": "Minimum Budget Edge Case",
+      "difficulty": "medium",
+      "score": 0,
+      "processing_time": 0.39725756645202637,
+      "used_fallback": true,
+      "recommendation_count": 0
+    },
+    {
+      "scenario_id": "weekend_family_dinner",
+      "scenario_name": "Weekend Family Dinner",
+      "difficulty": "easy",
+      "score": 0,
+      "processing_time": 30.0424587726593,
+      "used_fallback": true,
+      "recommendation_count": 0
+    },
+    {
+      "scenario_id": "business_lunch_quick",
+      "scenario_name": "Business Lunch - Quick Service",
+      "difficulty": "medium",
+      "score": 0,
+      "processing_time": 30.04774022102356,
+      "used_fallback": true,
+      "recommendation_count": 0
+    }
+  ],
+  "recommendations": [
+    "Overall recommendation quality is below target - consider improving LLM prompts or fallback logic",
+    "High fallback usage detected - investigate data coverage or LLM reliability",
+    "Processing time is above target - consider optimization",
+    "Explanation quality needs improvement - enhance prompt engineering"
+  ],
+  "detailed_results": [
+    {
+      "scenario_id": "basic_north_indian_bellandur",
+      "scenario_name": "Basic North Indian in Bellandur",
+      "difficulty": "easy",
+      "processing_time": 30.059011936187744,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "budget_friendly_chinese",
+      "scenario_name": "Budget-Friendly Chinese",
+      "difficulty": "easy",
+      "processing_time": 30.045591831207275,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "high_end_italian",
+      "scenario_name": "High-End Italian Dining",
+      "difficulty": "medium",
+      "processing_time": 1.1815400123596191,
+      "used_fallback": false,
+      "candidate_count": 38,
+      "recommendation_count": 5,
+      "quality_scores": {
+        "relevance": 1.0,
+        "diversity": 0.35555555555555557,
+        "explanation_quality": 0.6333333333333333,
+        "overall_score": 0.6073333333333333
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "very_high_rating_requirement",
+      "scenario_name": "Very High Rating Requirement",
+      "difficulty": "hard",
+      "processing_time": 0.370119571685791,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        "HTTP 503: {\"detail\":{\"error\":\"Recommendation service unavailable\",\"message\":\"Unexpected error: Phase 4 service returned 404: {\\\"detail\\\":\\\"No candidates found for the provided preferences. Try relaxing cuisine, rating, or budget constraints.\\\"}\",\"suggestion\":\"Please ensure the Phase 4 service is running on port 8401\"}}"
+      ]
+    },
+    {
+      "scenario_id": "specific_location_no_results",
+      "scenario_name": "Specific Location with No Results",
+      "difficulty": "hard",
+      "processing_time": 1.0946390628814697,
+      "used_fallback": false,
+      "candidate_count": 3,
+      "recommendation_count": 3,
+      "quality_scores": {
+        "relevance": 0.75,
+        "diversity": 0.6666666666666666,
+        "explanation_quality": 0.7666666666666666,
+        "overall_score": 0.6108333333333333
+      },
+      "errors": []
+    },
+    {
+      "scenario_id": "multiple_cuisines_preference",
+      "scenario_name": "Multiple Additional Preferences",
+      "difficulty": "medium",
+      "processing_time": 30.050873517990112,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "edge_case_min_budget",
+      "scenario_name": "Minimum Budget Edge Case",
+      "difficulty": "medium",
+      "processing_time": 0.39725756645202637,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        "HTTP 503: {\"detail\":{\"error\":\"Recommendation service unavailable\",\"message\":\"Unexpected error: Phase 4 service returned 404: {\\\"detail\\\":\\\"No candidates found for the provided preferences. Try relaxing cuisine, rating, or budget constraints.\\\"}\",\"suggestion\":\"Please ensure the Phase 4 service is running on port 8401\"}}"
+      ]
+    },
+    {
+      "scenario_id": "weekend_family_dinner",
+      "scenario_name": "Weekend Family Dinner",
+      "difficulty": "easy",
+      "processing_time": 30.0424587726593,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "business_lunch_quick",
+      "scenario_name": "Business Lunch - Quick Service",
+      "difficulty": "medium",
+      "processing_time": 30.04774022102356,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "recommendation_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "date_night_romantic",
+      "scenario_name": "Date Night - Romantic Setting",
+      "difficulty": "medium",
+      "processing_time": 19.605260133743286,
+      "used_fallback": false,
+      "candidate_count": 29,
+      "recommendation_count": 5,
+      "quality_scores": {
+        "relevance": 0.95,
+        "diversity": 0.7777777777777777,
+        "explanation_quality": 1.0,
+        "overall_score": 0.8416666666666666
+      },
+      "errors": []
+    }
+  ]
+}

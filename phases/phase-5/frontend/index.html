@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Restaurant Recommendations - Phase 5</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🍽️ AI Restaurant Recommendations</h1>
+            <p class="subtitle">Get personalized restaurant suggestions powered by AI</p>
+        </header>
+
+        <!-- Preference Form Section -->
+        <section id="preference-section" class="preference-section">
+            <div class="card">
+                <h2>Tell us your preferences</h2>
+                <form id="preference-form" class="preference-form">
+                    <!-- Location Input -->
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select a location</option>
+                            <option value="Bellandur">Bellandur</option>
+                            <option value="Marathahalli">Marathahalli</option>
+                            <option value="Sarjapur Road">Sarjapur Road</option>
+                            <option value="HSR">HSR</option>
+                            <option value="Koramangala">Koramangala</option>
+                            <option value="Indiranagar">Indiranagar</option>
+                        </select>
+                    </div>
+
+                    <!-- Budget Input -->
+                    <div class="form-group">
+                        <label for="budget">Budget *</label>
+                        <div class="budget-options">
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="low" required>
+                                <span class="budget-label">Low (₹0-₹800)</span>
+                            </label>
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="medium" required>
+                                <span class="budget-label">Medium (₹800-₹1500)</span>
+                            </label>
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="high" required>
+                                <span class="budget-label">High (₹1500+)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cuisine Input -->
+                    <div class="form-group">
+                        <label for="cuisine">Preferred Cuisine *</label>
+                        <select id="cuisine" name="cuisine" required>
+                            <option value="">Select cuisine</option>
+                            <option value="North Indian">North Indian</option>
+                            <option value="South Indian">South Indian</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Continental">Continental</option>
+                            <option value="Biryani">Biryani</option>
+                            <option value="Fast Food">Fast Food</option>
+                            <option value="Mughlai">Mughlai</option>
+                            <option value="European">European</option>
+                        </select>
+                    </div>
+
+                    <!-- Rating Input -->
+                    <div class="form-group">
+                        <label for="min-rating">Minimum Rating *</label>
+                        <div class="rating-slider">
+                            <input type="range" id="min-rating" name="min_rating" min="3.0" max="5.0" step="0.1" value="4.0" required>
+                            <div class="rating-display">
+                                <span id="rating-value">4.0</span>
+                                <div class="rating-stars" id="rating-stars">
+                                    ⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Preferences -->
+                    <div class="form-group">
+                        <label for="additional-preferences">Additional Preferences (Optional)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="additional_preferences" value="family-friendly">
+                                <span>Family Friendly</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="additional_preferences" value="quick-service">
+                                <span>Quick Service</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="additional_preferences" value="romantic">
+                                <span>Romantic</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="additional_preferences" value="outdoor-seating">
+                                <span>Outdoor Seating</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="get-recommendations">
+                        Get Recommendations
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loading-section" class="loading-section hidden">
+            <div class="loading-card">
+                <div class="spinner"></div>
+                <h2>Finding perfect restaurants for you...</h2>
+                <p>Our AI is analyzing your preferences and searching for the best matches</p>
+                <div class="loading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="progress-text">Analyzing preferences...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="results-section hidden">
+            <div class="results-header">
+                <h2>Your Personalized Recommendations</h2>
+                <p class="results-summary" id="results-summary"></p>
+                <div class="action-buttons">
+                    <button class="secondary-btn" id="refine-search">Refine Search</button>
+                    <button class="secondary-btn" id="regenerate">Regenerate</button>
+                </div>
+            </div>
+            
+            <div class="recommendations-grid" id="recommendations-grid">
+                <!-- Recommendation cards will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Error Section -->
+        <section id="error-section" class="error-section hidden">
+            <div class="error-card">
+                <div class="error-icon">⚠️</div>
+                <h2>Something went wrong</h2>
+                <p id="error-message">We couldn't get your recommendations. Please try again.</p>
+                <button class="primary-btn" id="retry-btn">Try Again</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="./app.js?v=2"></script>
+</body>
+</html>

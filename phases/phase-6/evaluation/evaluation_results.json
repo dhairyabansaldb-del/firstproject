@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "evaluation_timestamp": "2026-04-30T17:59:20.208082",
+    "total_scenarios": 10,
+    "successful_scenarios": 3,
+    "success_rate": 30.0,
+    "scenarios_with_fallback": 7,
+    "fallback_rate": 70.0
+  },
+  "results": [
+    {
+      "scenario_id": "basic_north_indian_bellandur",
+      "processing_time": 30.059011936187744,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "budget_friendly_chinese",
+      "processing_time": 30.045591831207275,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "high_end_italian",
+      "processing_time": 1.1815400123596191,
+      "used_fallback": false,
+      "candidate_count": 38,
+      "quality_scores": {
+        "relevance": 1.0,
+        "diversity": 0.35555555555555557,
+        "explanation_quality": 0.6333333333333333,
+        "overall_score": 0.6073333333333333
+      },
+      "recommendations": [
+        {
+          "restaurant_id": "71f34415aba62286",
+          "name": "Toscano",
+          "location": "Koramangala 7th Block",
+          "city": "Koramangala 7Th Block",
+          "cuisines": [
+            "Italian",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.5,
+          "votes": 724,
+          "rank": 1,
+          "explanation": "Toscano is the top recommendation due to its high rating and matching budget."
+        },
+        {
+          "restaurant_id": "cc64e57b84c54ef7",
+          "name": "Toscano",
+          "location": "Koramangala 7th Block",
+          "city": "Btm",
+          "cuisines": [
+            "Italian",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.5,
+          "votes": 710,
+          "rank": 2,
+          "explanation": "Toscano is the second recommendation due to its high rating and matching budget."
+        },
+        {
+          "restaurant_id": "29c7ca66e3aefa6d",
+          "name": "Toscano",
+          "location": "Koramangala 7th Block",
+          "city": "Jayanagar",
+          "cuisines": [
+            "Italian",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.5,
+          "votes": 715,
+          "rank": 3,
+          "explanation": "Toscano is the third recommendation due to its high rating and matching budget."
+        },
+        {
+          "restaurant_id": "b3d9350ccb94514c",
+          "name": "Toscano",
+          "location": "Koramangala 7th Block",
+          "city": "Koramangala 4Th Block",
+          "cuisines": [
+            "Italian",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.5,
+          "votes": 717,
+          "rank": 4,
+          "explanation": "Toscano is the fourth recommendation due to its high rating and matching budget."
+        },
+        {
+          "restaurant_id": "2413899b57d6563b",
+          "name": "Toscano",
+          "location": "Koramangala 7th Block",
+          "city": "Koramangala 5Th Block",
+          "cuisines": [
+            "Italian",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.5,
+          "votes": 718,
+          "rank": 5,
+          "explanation": "Toscano is the fifth recommendation due to its high rating and matching budget."
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario_id": "very_high_rating_requirement",
+      "processing_time": 0.370119571685791,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        "HTTP 503: {\"detail\":{\"error\":\"Recommendation service unavailable\",\"message\":\"Unexpected error: Phase 4 service returned 404: {\\\"detail\\\":\\\"No candidates found for the provided preferences. Try relaxing cuisine, rating, or budget constraints.\\\"}\",\"suggestion\":\"Please ensure the Phase 4 service is running on port 8401\"}}"
+      ]
+    },
+    {
+      "scenario_id": "specific_location_no_results",
+      "processing_time": 1.0946390628814697,
+      "used_fallback": false,
+      "candidate_count": 3,
+      "quality_scores": {
+        "relevance": 0.75,
+        "diversity": 0.6666666666666666,
+        "explanation_quality": 0.7666666666666666,
+        "overall_score": 0.6108333333333333
+      },
+      "recommendations": [
+        {
+          "restaurant_id": "117dd500c87fc8ba",
+          "name": "Fire Station",
+          "location": "Electronic City",
+          "city": "Electronic City",
+          "cuisines": [
+            "Continental",
+            "Mexican",
+            "Burger",
+            "Desserts",
+            "Italian",
+            "Pizza",
+            "North Indian",
+            "Chinese"
+          ],
+          "average_cost_for_two": 1200.0,
+          "rating": 4.4,
+          "votes": 808,
+          "rank": 1,
+          "explanation": "Fire Station is a highly rated Mexican restaurant in Electronic City with a budget-friendly price of 1200.0."
+        },
+        {
+          "restaurant_id": "d09c85071174f70f",
+          "name": "Cafe Happytizing",
+          "location": "Electronic City",
+          "city": "Electronic City",
+          "cuisines": [
+            "Cafe",
+            "Sandwich",
+            "Pizza",
+            "North Indian",
+            "Mexican"
+          ],
+          "average_cost_for_two": 700.0,
+          "rating": 4.1,
+          "votes": 351,
+          "rank": 2,
+          "explanation": "Cafe Happytizing is a good option for Mexican food in Electronic City, but it's slightly out of budget at 700.0."
+        },
+        {
+          "restaurant_id": "1d0f791ec76d0a7d",
+          "name": "Firangi Bake",
+          "location": "Electronic City",
+          "city": "Electronic City",
+          "cuisines": [
+            "Mexican",
+            "Italian"
+          ],
+          "average_cost_for_two": 600.0,
+          "rating": 4.1,
+          "votes": 93,
+          "rank": 3,
+          "explanation": "Firangi Bake is a Mexican restaurant in Electronic City, but it's too expensive at 600.0."
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario_id": "multiple_cuisines_preference",
+      "processing_time": 30.050873517990112,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "edge_case_min_budget",
+      "processing_time": 0.39725756645202637,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        "HTTP 503: {\"detail\":{\"error\":\"Recommendation service unavailable\",\"message\":\"Unexpected error: Phase 4 service returned 404: {\\\"detail\\\":\\\"No candidates found for the provided preferences. Try relaxing cuisine, rating, or budget constraints.\\\"}\",\"suggestion\":\"Please ensure the Phase 4 service is running on port 8401\"}}"
+      ]
+    },
+    {
+      "scenario_id": "weekend_family_dinner",
+      "processing_time": 30.0424587726593,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "business_lunch_quick",
+      "processing_time": 30.04774022102356,
+      "used_fallback": true,
+      "candidate_count": 0,
+      "quality_scores": {
+        "relevance": 0,
+        "diversity": 0,
+        "explanation_quality": 0,
+        "overall_score": 0
+      },
+      "recommendations": [],
+      "errors": [
+        ""
+      ]
+    },
+    {
+      "scenario_id": "date_night_romantic",
+      "processing_time": 19.605260133743286,
+      "used_fallback": false,
+      "candidate_count": 29,
+      "quality_scores": {
+        "relevance": 0.95,
+        "diversity": 0.7777777777777777,
+        "explanation_quality": 1.0,
+        "overall_score": 0.8416666666666666
+      },
+      "recommendations": [
+        {
+          "restaurant_id": "4cdc916cc0d05668",
+          "name": "Toit",
+          "location": "Indiranagar",
+          "city": "Indiranagar",
+          "cuisines": [
+            "Italian",
+            "American",
+            "Pizza"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.7,
+          "votes": 14956,
+          "rank": 1,
+          "explanation": "Toit matches all preferences: high budget, Italian cuisine, location in Indiranagar, and a rating of 4.7."
+        },
+        {
+          "restaurant_id": "7c81bc0268555562",
+          "name": "Chianti",
+          "location": "Indiranagar",
+          "city": "Indiranagar",
+          "cuisines": [
+            "Italian"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.7,
+          "votes": 4398,
+          "rank": 2,
+          "explanation": "Chianti matches all preferences: high budget, Italian cuisine, location in Indiranagar, and a rating of 4.7."
+        },
+        {
+          "restaurant_id": "a01ab17a2c4c0fdc",
+          "name": "LOFT38",
+          "location": "Indiranagar",
+          "city": "Old Airport Road",
+          "cuisines": [
+            "Italian",
+            "Bbq",
+            "Asian",
+            "Fast Food"
+          ],
+          "average_cost_for_two": 1900.0,
+          "rating": 4.3,
+          "votes": 3655,
+          "rank": 3,
+          "explanation": "LOFT38 matches all preferences: high budget, Italian cuisine, location in Indiranagar, and a rating of 4.3."
+        },
+        {
+          "restaurant_id": "2309db2ace785b42",
+          "name": "Portland Steakhouse & Cafe",
+          "location": "MG Road",
+          "city": "Indiranagar",
+          "cuisines": [
+            "Steak",
+            "Italian",
+            "Continental",
+            "American",
+            "Burger",
+            "Bbq",
+            "Salad"
+          ],
+          "average_cost_for_two": 1500.0,
+          "rating": 4.3,
+          "votes": 2039,
+          "rank": 4,
+          "explanation": "Portland Steakhouse & Cafe matches all preferences: high budget, Italian cuisine, location in Indiranagar, and a rating of 4.3."
+        },
+        {
+          "restaurant_id": "ab3642efc4bf04e2",
+          "name": "Cafe Max",
+          "location": "Indiranagar",
+          "city": "Indiranagar",
+          "cuisines": [
+            "Cafe",
+            "Continental",
+            "Italian",
+            "German",
+            "French",
+            "Spanish"
+          ],
+          "average_cost_for_two": 1300.0,
+          "rating": 4.3,
+          "votes": 1651,
+          "rank": 5,
+          "explanation": "Cafe Max matches all preferences: high budget, Italian cuisine, location in Indiranagar, and a rating of 4.3."
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

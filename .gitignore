@@ -1,0 +1,31 @@
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data (avoid pushing large JSONs to github)
+data/
+phases/*/backend/data/*.json
+
+# Temporary Debug/Test Scripts created during development
+test_query.py
+debug_api.py
+get_recs.py
+test_backend.py
+debug_*.py
+test_*.py
+check_frontend.py
+comprehensive_system_test.py
+final_deployment_test.py
+fix_budget_filtering.py
+phase4_response.json
+
+# OS files
+.DS_Store
+Thumbs.db
