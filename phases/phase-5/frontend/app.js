@@ -145,8 +145,12 @@ class RestaurantRecommendationApp {
     }
 
     async fetchRecommendations(preferences) {
+        // Dynamic Base URL: Use Vercel proxy (/api) if deployed, else localhost
+        const isLocal = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+        const API_BASE_URL = isLocal ? 'http://127.0.0.1:8500' : '/api';
+
         try {
-            const response = await fetch('http://127.0.0.1:8500/recommendations', {
+            const response = await fetch(`${API_BASE_URL}/recommendations`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
