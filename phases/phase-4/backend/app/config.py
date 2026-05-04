@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     app_env: str = "development"
     app_host: str = "127.0.0.1"
     app_port: int = 8400
-    catalog_file: str = "c:\\project\\phases\\phase-2\\backend\\data\\restaurants.normalized.json"
+    catalog_file: str = "phases/phase-1/backend/data/restaurants.normalized.json"
     groq_api_key: str = ""
     groq_model: str = "llama-3.1-8b-instant"
 
