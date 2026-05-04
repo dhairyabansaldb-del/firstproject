@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://<YOUR_RAILWAY_URL>/:match*"
+      "destination": "https://web-production-8874a.up.railway.app/:match*"
     }
   ]
 }
