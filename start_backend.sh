@@ -1,6 +1,5 @@
 #!/bin/bash
-# Fetch and build the Zomato data catalog on the Railway server
-python phases/phase-1/backend/scripts/ingest_zomato.py
+# Dataset is now committed directly to the repo to prevent OOM errors on Railway startup
 
 # Start Phase 4 internally (Core Recommendation API)
 python -m uvicorn phases.phase-4.backend.app.main:app --host 127.0.0.1 --port 8401 &
